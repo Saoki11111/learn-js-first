@@ -4,7 +4,6 @@
 
 random = Math.ceil(Math.random()*100);
 console.log("サイコロの結果は" + random + "です！");
-<<<<<<< HEAD
 
 // --- //
 
@@ -20,5 +19,3 @@ if (random <= 5){
 }
 
 console.log(message + "です！");
-=======
->>>>>>> ff2503a1d062daeb2a79e09cd59e4ef435bd5d63
