@@ -19,3 +19,37 @@ if (random <= 5){
 }
 
 console.log(message + "です！");
+
+// --- //
+
+// 1 ~ 100 までの整数のどれかがランダムで表示される
+// 関数を使用する
+
+dice = function(){
+  return Math.ceil(Math.random()*100);
+};
+
+console.log("サイコロの結果は"+dice()+"です！");
+
+// -- //
+
+// money と price を渡すと
+// 購入可能なら true
+// 購入不可なら false
+// を返す関数 canBuy(money, price) を作成する
+
+canBuy = function(money, price){
+  if (money >= price){
+    // return true;
+    money = money;
+    return "買える";
+  }else{ 
+    // return false;
+    price = price;
+    return "買えない";
+  }
+};
+
+console.log(money + "円で" + price + "円のものは" + canBuy(100, 300));
+console.log(money + "円で" + price + "円のものは" + canBuy(300, 300));
+console.log(money + "円で" + price + "円のものは" + canBuy(100000, 83495));
