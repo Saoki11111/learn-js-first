@@ -37,3 +37,35 @@ getRangeCount = function(ary, min, max) {
 };
 
 console.log(getRangeCount([67, 23, 70] 0,50))
+
+// 赤点の人数を探す
+// -> 平均点の半分の点数以下
+
+// 平均点を算出する avarage の関数
+average = function(ary){
+  // 合計を宣言
+  var total = 0;
+  // 配列の最大数回す -> 合計に配列の値(value)を追加する -> 合計を配列の数で割る 
+  for (var index = 0; index < ary.length; index++){
+    // 合計に配列の値(value)を追加する
+    total += ary[index];
+  }
+  // 合計を配列の数で割る
+  return total / ary.length;
+}
+
+getRedStudentCount = function(ary){
+  // 平均点
+  var avg = average(ary);
+  // 平均点は半分以下の点数
+  var count = 0;
+  // index(配列の数の最大まで回す)
+  for (var index = 0; index < ary.length; index++){
+    if (ary[index] <= avg / 2){
+      count++;
+    }
+  }
+  // count 数を返す
+  return count;
+}
+console.log(getRedStudentCount([67, 23, 70]));
