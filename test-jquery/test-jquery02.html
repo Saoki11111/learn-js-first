@@ -1,0 +1,26 @@
+<!-- <button>aaa</button> バニラボタン -->
+<!--
+  イベント: すべてのエレメントを検知する
+            js -> ボタンクリック -> 命令
+            -> window サイズを変える -> 1px ごと？とか
+            -> マウスが100px動いたら ...etc
+            -> jquery ready -> 準備できたら動く
+            -> エレメントごと -> ボタンを押されたとき
+            -> クリック -> 上げたとき、押されたとき
+  イベント登録: $(element).on(event名, 実行したい関数)
+            $('button').on('click', buttonClicked);
+            $('button').off('click', buttonClicked);
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <span id="mesage">ボタンは押されていません</span><br>
+    <button>押すとメッセージ変更</button>
+  </body>
+</html>
