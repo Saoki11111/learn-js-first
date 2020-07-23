@@ -1,0 +1,45 @@
+<!-- 
+  element = tag
+  css を操作する = $(element).css(parametor_name, 値)
+  html を操作する = $(element).html(値)
+  tag を操作する = $(element).attr(parametar_name, 値)
+
+  setTimeout(関数, ミリ秒)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <span id="message">abcdefg</span>
+  <script>
+    // 準備できたら main 実行
+    $().ready(function(){
+      main();
+    }
+    // main 内は changediceを 0.1 秒ごとに実行
+    main = function(){
+      setInterval(changeDice, 100);
+    }
+    changeMessage = function(){
+      // messageを変える
+      $('#message').html('12345');
+    }
+    // 画像を切替える
+    changeDice = function(){
+      // サイコロの目
+      var diceNumber = rand(1,6);
+      // サイコロの目からファイルを作成
+      var filename = '../dice'+diceNumber+'.png';
+      // diceをそのファイルに変える
+      $('#dice').attr('src', filename);
+
+      // メッセージの内容を変える
+      $('#dice_message').html('diceNumber' + 'が出ました!');
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#p1{
+  color: #0000ff;
+}
+#p2{
+}
+#p3{
+  border: 10px double #000000;
+  font-size: 200%;
+}
+#p4{
+  color: #ffffff;
+  background-color: #00ff00;
+}
+#p5{
+  color: #ff0000;
+  border: 5px solid #000000;
+  font-size: 500%;
+  background-color: #0000ff;
+}
